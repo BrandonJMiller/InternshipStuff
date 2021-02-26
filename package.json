@@ -4,7 +4,7 @@
   "description": "",
   "main": "soundcloud.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node helloWorldExample.js"
   },
   "repository": {
     "type": "git",

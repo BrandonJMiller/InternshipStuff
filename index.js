@@ -2,6 +2,10 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
+app.get('/', function(req,res) {
+	res.redirect('/todo');
+});
+
 .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 /*
 .get('/', (req, res) => {

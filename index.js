@@ -2,11 +2,11 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
-get('/', (req, res) => {
+.get('/', (req, res) => {
 	res.send('Hello World')
 })
 
-listen(port, () => {
+.listen(port, () => {
 	console.log(`Example app listening at http://localhost:${port}`)
 })
 

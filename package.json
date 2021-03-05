@@ -2,9 +2,9 @@
   "name": "myapp",
   "version": "1.0.0",
   "description": "",
-  "main": "soundcloud.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node helloWorldExample.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

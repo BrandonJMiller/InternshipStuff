@@ -2,10 +2,12 @@
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
-.listen(PORT, () => console.log(`Listening on ${ PORT }`))
-.get('/', (req, res) => {
+const server = express();
+
+server.get('/', (req, res) => {
 	res.send('Hello World')
 })
-.listen(port, () => {
-	console.log(`listening on ${PORT}`)
+
+server.listen(PORT, () => {
+	console.log('listening on ${PORT}')
 })

@@ -19,7 +19,3 @@ app.post('/submit-form', (req, res) => {
 	const username = req.body.username
 	res.end()
 })
-<form method="POST" action="/submit-form">
-	<input type="text" name="username" />
-	<input type="submit" />
-</form>

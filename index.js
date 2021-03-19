@@ -11,3 +11,7 @@ server.get('/', (req, res) => {
 server.listen(PORT, () => {
 	console.log('listening on ${PORT}')
 })
+<form method="POST" action="/submit-form">
+	<input type="test" name="username" />
+	<input type="submit" />
+</form>

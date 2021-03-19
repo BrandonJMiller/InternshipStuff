@@ -15,3 +15,8 @@ server.listen(PORT, () => {
 app.use(express.urlencoded({
 	extended: true
 }))
+app.post('/submit-form', (req, res) => {
+	const username = req.body.username
+	res.end()
+})
+	 

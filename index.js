@@ -3,6 +3,7 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 const server = express();
+const app = express()
 
 server.get('/', (req, res) => {
 	res.send('Hello World')
@@ -11,7 +12,6 @@ server.get('/', (req, res) => {
 server.listen(PORT, () => {
 	console.log('listening on ${PORT}')
 })
-<form method="POST" action="/submit-form">
-	<input type="test" name="username" />
-	<input type="submit" />
-</form>
+app.use(express.urlencoded({
+	extended: true
+}))

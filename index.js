@@ -21,7 +21,7 @@ app.post('/submit-form', (req, res) => {
 })
 function handleFiles(event) {
     var files = event.target.files;
-    $("src").attr("src", URL.createObjectURL(files[0]));
+    $("#src").attr("src", URL.createObjectURL(files[0]));
     document.getElementById("audio").load();
 }
 
@@ -30,4 +30,4 @@ document.getElementById("upload").addEventListener("change", handleFiles, false)
 <input type="file" id="upload" />
 <audio id="audio" controls>
   <source src="" id="src" />
-</audio>
+//</audio>

@@ -30,3 +30,4 @@ document.getElementById("upload").addEventListener("change", handleFiles, false)
 <input type="file" id="upload" />
 <audio id="audio" controls>
   <source src="" id="src" />
+  </audio>

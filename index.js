@@ -26,7 +26,7 @@ function handleFiles(event) {
 }
 
 document.getElementById("upload").addEventListener("change", handleFiles, false);
-script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <input type="file" id="upload" />
 <audio id="audio" controls>
   <source src="" id="src" />

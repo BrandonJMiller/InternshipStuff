@@ -19,14 +19,25 @@ app.post('/submit-form', (req, res) => {
 	const username = req.body.username
 	res.end()
 })
+/*
 function handleFiles(event) {
     var files = event.target.files;
     $("#src").attr("src", URL.createObjectURL(files[0]));
     document.getElementById("audio").load();
 }
-
-document.getElementById("upload").addEventListener("change", handleFiles, false);
-<><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><input type="file" id="upload" />	
-	<audio id="audio" controls>
-		<source src="" id="src" />
-	</audio></>
+*/
+function SavePhoto(e)
+{
+ let user = { name:'john', age:34 };
+    let xhr = new XMLHttpRequest();
+    let formData = new FormData();
+    let photo = e.files[0];      
+    
+    formData.append("user", JSON.stringify(user));   
+    formData.append("photo", photo);
+    
+    xhr.onreadystatechange = state => { console.log(xhr.status); } // err handling
+    xhr.timeout = 5000;
+    xhr.open("POST", '/upload/image'); 
+    xhr.send(formData);
+}

@@ -7,7 +7,7 @@ const app = express()
 
 server.get('/', (req, res) => {
 	res.send('Hello World')
-	res.sent('Foobar.js')
+	res.send('Foobar.js')
 })
 
 server.listen(PORT, () => {

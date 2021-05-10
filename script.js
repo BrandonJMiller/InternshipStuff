@@ -19,12 +19,3 @@ app.post('/submit-form', (req, res) => {
 	const username = req.body.username
 	res.end()
 })
-
-
-const actualBtn = document.getElementById('actual-btn');
-
-const fileChosen = document.getElementById('file-chosen');
-
-actualBtn.addEventListener('change', function(){
-  fileChosen.textContent = this.files[0].name
-})

@@ -1,10 +1,5 @@
 <!DOCTYPE html>
-<html>
-<body>
 
-<input type="file" id="real-file" hidden="hidden" />
-<button type="button" id="custom-button">CHOOSE A FILE</button>
-<span id="custom-text">No file chosen, yet.</span>
+<input id='fileid' type='file' hidden/>
+<input id='buttonid' type='button' value='Upload MB' />
 
-</body>
-</html>

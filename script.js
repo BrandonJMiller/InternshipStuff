@@ -3,6 +3,9 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 const server = express();
+const realFileBtn = document.getElementById("real-file");
+const customBtn = document.getElementById("custom-button");
+const customTxt = document.getElementById("custom-text");
 const app = express()
 
 server.get('/', (req, res) => {
@@ -21,9 +24,6 @@ app.post('/submit-form', (req, res) => {
 })
 
 
-const realFileBtn = document.getElementById("real-file");
-const customBtn = document.getElementById("custom-button");
-const customTxt = document.getElementById("custom-text");
 
 customBtn.addEventListener("click", function() {
   realFileBtn.click();

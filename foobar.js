@@ -2,12 +2,16 @@
 <html>
 <body>
 
-<p>Click on the "Choose File" button to upload a file:</p>
+<br>
 
-<form action="/action_page.php">
-  <input type="file" id="myFile" name="filename">
-  <input type="submit">
-</form>
+<!-- actual upload which is hidden -->
+<input type="file" id="actual-btn" hidden/>
+
+<!-- our custom upload button -->
+<label for="actual-btn">Choose File</label>
+
+<!-- name of file chosen -->
+<span id="file-chosen">No file chosen</span>
 
 </body>
 </html>

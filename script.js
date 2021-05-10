@@ -19,3 +19,9 @@ app.post('/submit-form', (req, res) => {
 	const username = req.body.username
 	res.end()
 })
+
+document.getElementById('buttonid').addEventListener('click', openDialog);
+
+function openDialog() {
+  document.getElementById('fileid').click();
+}

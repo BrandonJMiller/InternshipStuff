@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-
-<input id='fileid' type='file' hidden/>
-<input id='buttonid' type='button' value='Upload MB' />
+<Html>
+  <Body>
+  <Form Name = "" Method = "" Action = "">
+    <Input Type = "File" accept = "audio/*">
+  </Form>
+</Body>
+</Html>
 

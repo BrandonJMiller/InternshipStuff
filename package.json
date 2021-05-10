@@ -5,9 +5,9 @@
   "engines": {
     "node": "14.15.5"
   },
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
-    "start":"node index.js && node foobar.js" ,
+    "start":"node script.js && node foobar.js" ,
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

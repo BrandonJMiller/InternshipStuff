@@ -8,8 +8,7 @@ const app = express()
 server.get('/', (req, res) => {
 	res.send('Hello World')
 })
-server.get('/', (req, res) => {
-//app.post('/upload-photos', async (req, res) => {
+app.post('/upload-photos', async (req, res) => {
     try {
         if(!req.files) {
             res.send({
@@ -52,3 +51,23 @@ server.listen(PORT, () => {
 app.use(express.urlencoded({
 	extended: true
 }))
+
+const fileUpload = require('express-fileupload');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const _ = require('lodash');
+
+const app = express();
+
+// enable files upload
+app.use(fileUpload({
+    createParentPath: true
+}));
+
+//add other middleware
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(morgan('dev'));
+);

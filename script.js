@@ -8,19 +8,6 @@ const app = express()
 server.get('/', (req, res) => {
 	res.send('Hello World')
 })
-
-server.listen(PORT, () => {
-	console.log('listening on ${PORT}')
-})
-app.use(express.urlencoded({
-	extended: true
-}))
-/*
-app.post('/submit-form', (req, res) => {
-	const username = req.body.username
-	res.end()
-})
-*/
 app.post('/upload-photos', async (req, res) => {
     try {
         if(!req.files) {
@@ -57,3 +44,10 @@ app.post('/upload-photos', async (req, res) => {
         res.status(500).send(err);
     }
 });
+
+server.listen(PORT, () => {
+	console.log('listening on ${PORT}')
+})
+app.use(express.urlencoded({
+	extended: true
+}))

@@ -8,10 +8,6 @@ const app = express()
 server.get('/', (req, res) => {
 	res.send('Hello World')
 })
-// enable files upload
-app.use(fileUpload({
-    createParentPath: true
-}));
 
 //add other middleware
 app.use(cors());

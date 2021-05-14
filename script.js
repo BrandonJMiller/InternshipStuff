@@ -8,7 +8,8 @@ const app = express()
 server.get('/', (req, res) => {
 	res.send('Hello World')
 })
-app.post('/upload-photos', async (req, res) => {
+server.get('/', (req, res) => {
+//app.post('/upload-photos', async (req, res) => {
     try {
         if(!req.files) {
             res.send({

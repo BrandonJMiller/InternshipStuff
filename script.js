@@ -58,8 +58,6 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const _ = require('lodash');
 
-const app = express();
-
 // enable files upload
 app.use(fileUpload({
     createParentPath: true

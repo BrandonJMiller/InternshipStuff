@@ -10,11 +10,6 @@
     "start":"node script.js" ,
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "upload": "foobar.js",
-  "scripts": {
-    "start":"node foobar.js" ,
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/BrandonJMiller"

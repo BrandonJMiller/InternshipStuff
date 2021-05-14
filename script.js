@@ -8,6 +8,17 @@ const app = express()
 server.get('/', (req, res) => {
 	res.send('Hello World')
 })
+// enable files upload
+app.use(fileUpload({
+    createParentPath: true
+}));
+
+//add other middleware
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(morgan('dev'));
+
 app.post('/upload-photos', async (req, res) => {
     try {
         if(!req.files) {
@@ -52,19 +63,3 @@ app.use(express.urlencoded({
 	extended: true
 }))
 
-const fileUpload = require('express-fileupload');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const morgan = require('morgan');
-const _ = require('lodash');
-
-// enable files upload
-app.use(fileUpload({
-    createParentPath: true
-}));
-
-//add other middleware
-app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(morgan('dev'));

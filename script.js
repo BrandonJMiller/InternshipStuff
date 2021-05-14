@@ -9,12 +9,6 @@ server.get('/', (req, res) => {
 	res.send('Hello World')
 })
 
-//add other middleware
-app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(morgan('dev'));
-
 app.post('/upload-photos', async (req, res) => {
     try {
         if(!req.files) {

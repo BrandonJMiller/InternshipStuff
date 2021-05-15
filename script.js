@@ -15,4 +15,3 @@ server.listen(PORT, () => {
 app.use(express.urlencoded({
 	extended: true
 }))
-app.use(express.static(__dirname + '/public'));

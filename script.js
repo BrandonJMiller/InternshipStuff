@@ -4,6 +4,8 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 const server = express();
 const app = express()
+const path = require("path")
+const multer = require("multer")
 
 server.get('/', (req, res) => {
 	res.send('Hello World')
@@ -16,10 +18,7 @@ app.use(express.urlencoded({
 	extended: true
 }))
 
-const express = require("express")
-const path = require("path")
-const multer = require("multer")
-const app = express()
+
     
 // View Engine Setup
 app.set("views",path.join(__dirname,"views"))

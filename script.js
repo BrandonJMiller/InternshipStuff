@@ -1,14 +1,14 @@
 
 const express = require('express')
 const path = require('path')
-const multer = require('multer')
+//const multer = require('multer')
 const PORT = process.env.PORT || 5000
 const server = express();
 const app = express()
 
 
 server.get('/', (req, res) => {
-	res.send('Hello World')
+	res.send('Yo')
 })
 
 server.listen(PORT, () => {
@@ -19,7 +19,7 @@ app.use(express.urlencoded({
 }))
 
 
-    
+/*  
 // View Engine Setup
 app.set("views",path.join(__dirname,"views"))
 app.set("view engine","ejs")
@@ -96,3 +96,4 @@ app.listen(5000,function(error) {
     if(error) throw error
         console.log("Server created Successfully on PORT 8080")
 })
+*/

@@ -1,10 +1,20 @@
-var http = require('http');
-
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write('<form action="fileupload" method="post" enctype="multipart/form-data">');
-  res.write('<input type="file" name="filetoupload"><br>');
-  res.write('<input type="submit">');
-  res.write('</form>');
-  return res.end();
-}).listen(5000);
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>FILE UPLOAD DEMO</title>
+</head>
+  
+<body>
+    <h1>Single File Upload Demo</h1>
+   
+    <form action="/uploadProfilePicture" 
+      enctype="multipart/form-data" method="POST">
+      
+        <span>Upload Profile Picture:</span>  
+        <input type="file" name="mypic" required/> <br>
+        <input type="submit" value="submit"> 
+    </form>
+</body>
+  
+</html>

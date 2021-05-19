@@ -4,7 +4,7 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 const server = express();
 const app = express()
-const multer = require("multer")
+const multer = require('multer');
 
 server.get('/', (req, res) => {
 	res.send('Hello World')

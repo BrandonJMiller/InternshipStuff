@@ -20,7 +20,8 @@
     "express": "^4.17.1",
     "github": "^14.0.0",
     "nodegit": "^0.27.0",
-    "npm-git-install": "^0.3.0"
+    "npm-git-install": "^0.3.0",
+    "multer": "^6.14.11"
   },
   "keywords": [
     "node"

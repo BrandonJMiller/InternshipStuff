@@ -1,7 +1,7 @@
 
 const express = require('express')
 const path = require('path')
-const multer = require('multer');
+var multer = require('multer');
 const PORT = process.env.PORT || 5000
 const server = express();
 const app = express()

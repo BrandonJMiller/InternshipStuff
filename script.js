@@ -34,7 +34,7 @@ http.createServer(function (req, res) {
 
 
 server.get('/', (req, res) => {
-	res.send('Yo')
+	res.send('Hello World')
 })
 server.listen(PORT, () => {
 	console.log('listening on ${PORT}')

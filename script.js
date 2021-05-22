@@ -8,12 +8,12 @@ const app = express()
 
 
 var http = require('http');
-var formidable = require('./formidable');
+//var formidable = require('./formidable');
 var fs = require('fs');
 
 http.createServer(function (req, res) {
   if (req.url == '/fileupload') {
-    var form = new formidable.IncomingForm();
+   // var form = new formidable.IncomingForm();
     form.parse(req, function (err, fields, files) {
       var oldpath = files.filetoupload.path;
       var newpath = 'C:/Users/Your Name/' + files.filetoupload.name;

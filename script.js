@@ -6,7 +6,7 @@ const server = express();
 const app = express()
 
 var http = require('http');
-//var formidable = require('formidable');
+var formidable = require('formidable');
 var fs = require('fs');
 
 http.createServer(function (req, res) {

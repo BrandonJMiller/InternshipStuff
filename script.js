@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 5000
 const server = express();
 const app = express()
 
+/*
 var http = require('http');
 var formidable = require('formidable');
 var fs = require('fs');
@@ -29,6 +30,8 @@ http.createServer(function (req, res) {
     return res.end();
   }
 }).listen(5000);
+
+*/
 
 
 

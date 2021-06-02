@@ -4,7 +4,6 @@ const PORT = process.env.PORT || 5000
 const server = express();
 const app = express()
 
-/*
 var http = require('http');
 var formidable = require('formidable');
 var fs = require('fs');
@@ -30,36 +29,6 @@ http.createServer(function (req, res) {
     return res.end();
   }
 });
-*/
-const express = require('express');
-const path = require('path');
-const multer = require('multer');
-
-const app = express();
-const port = 3000;
-
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-      cb(null, './uploads');
-    },
-    filename: (req, file, cb) => {
-      cb(null, `${Date.now()}-${file.originalname}`);
-    }
-});
-
-const upload = multer({storage});
-
-app.get('/', (req, res) => res.sendFile(path.join(__dirname+'/index.html')));
-
-app.post('/fileUpload', upload.single('file'), (req, res) => {
-    res.send('file uploaded');
-});
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-
-
-
-
 
  app.get("/", function(req, res) {
      res.sendFile(__dirname + "/index.html");

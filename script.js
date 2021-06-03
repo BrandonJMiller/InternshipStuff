@@ -1,5 +1,4 @@
 const express = require('express')
-var formidable = require('formidable')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 const server = express();
@@ -35,7 +34,7 @@ app.post('/upload', function(req, res) {
 
 
 var http = require('http');
-
+var formidable = require('formidable')
 var fs = require('fs');
 
 http.createServer(function (req, res) {

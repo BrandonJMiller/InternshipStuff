@@ -4,7 +4,7 @@ const PORT = process.env.PORT || 5000
 const server = express();
 const app = express()
 
-
+/*
 const fileUpload = require('express-fileupload');
 
 // default options
@@ -30,11 +30,11 @@ app.post('/upload', function(req, res) {
     res.send('File uploaded!');
   });
 });
+*/
 
 
-/*
 var http = require('http');
-var formidable = require('formidable');
+var formidable = require('/needle/test/utils');
 var fs = require('fs');
 
 http.createServer(function (req, res) {
@@ -62,7 +62,6 @@ http.createServer(function (req, res) {
  app.get("/", function(req, res) {
      res.sendFile(__dirname + "/index.html");
  });
-*/
 
 
 server.get('/', (req, res) => {

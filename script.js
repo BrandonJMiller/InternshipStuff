@@ -5,10 +5,10 @@ const server = express();
 const app = express()
 
 
-//const fileUpload = require('express-fileupload');
+const fileUpload = require('express-fileupload');
 
 // default options
-//app.use(fileUpload());
+app.use(fileUpload());
 
 app.post('/upload', function(req, res) {
   let sampleFile;

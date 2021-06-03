@@ -34,7 +34,7 @@ app.post('/upload', function(req, res) {
 
 
 var http = require('http');
-var formidable = require('/InternshipStuff/node_modules/needle/test/utils');
+var formidable = require('formidable');
 var fs = require('fs');
 
 http.createServer(function (req, res) {

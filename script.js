@@ -29,21 +29,17 @@ app.post('/', function (req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
-//app.listen(3000);
+app.listen(3000);
 
-/*
 server.get('/', (req, res) => {
 	res.send('Hello World')
 })
-*/
 server.listen(PORT, () => {
 	console.log('listening on ${PORT}')
 })
-/*
 app.use(express.urlencoded({
 	extended: true
 }))
-*/
 
 
 

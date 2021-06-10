@@ -29,8 +29,8 @@ app.post('/', function (req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
-app.listen(5000);
-/*
+app.listen('listening on # ${PORT}');
+
 server.get('/', (req, res) => {
 	res.send('Hello World')
 })
@@ -40,6 +40,6 @@ server.listen(PORT, () => {
 app.use(express.urlencoded({
 	extended: true
 }))
-*/
+
 
 

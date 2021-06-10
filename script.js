@@ -31,17 +31,19 @@ app.post('/', function (req, res){
 
 //app.listen(3000);
 
-
+/*
 server.get('/', (req, res) => {
 	res.send('Hello World')
 })
+*/
 server.listen(PORT, () => {
 	console.log('listening on ${PORT}')
 })
+/*
 app.use(express.urlencoded({
 	extended: true
 }))
-
+*/
 
 
 

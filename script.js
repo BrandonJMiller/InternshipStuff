@@ -33,7 +33,7 @@ app.post('/', function (req, res){
 
 
 server.get('/', (req, res) => {
-	res.send('Hello World')
+	res.send('H')
 })
 server.listen(PORT, () => {
 	console.log('listening on ${PORT}')

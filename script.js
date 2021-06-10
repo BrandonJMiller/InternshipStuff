@@ -29,7 +29,7 @@ app.post('/', function (req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
-app.listen('listening on # ${PORT}');
+app.listen('listening on ${PORT}');
 
 server.get('/', (req, res) => {
 	res.send('Hello World')

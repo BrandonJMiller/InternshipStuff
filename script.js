@@ -17,9 +17,9 @@ app.post('/upload', upload.single('photo'), (req, res) => {
     else throw 'error';
 });
 
-app.get('/', function (req, res) {
+app.get('/', (req, res) => {
   res.send('Upload')
-});
+})
 
 
 server.get('/', (req, res) => {

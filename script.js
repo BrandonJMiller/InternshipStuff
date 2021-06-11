@@ -16,11 +16,11 @@ app.post('/upload', upload.single('photo'), (req, res) => {
     }
     else throw 'error';
 });
-
+/*
 app.listen(PORT, () => {
     console.log('Listening at ' + PORT );
 });
-
+*/
 
 server.get('/', (req, res) => {
 	res.send('Hello World')

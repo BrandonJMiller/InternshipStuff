@@ -32,7 +32,7 @@ app.post('/', function (req, res){
 app.listen(5000);
 
 
-/*
+
 server.get('/', (req, res) => {
 	res.send('Hello World')
 })
@@ -42,6 +42,6 @@ server.listen(PORT, () => {
 app.use(express.urlencoded({
 	extended: true
 }))
-*/
+
 
 

@@ -17,19 +17,14 @@ app.post('/upload', upload.single('photo'), (req, res) => {
     else throw 'error';
 });
 
-server.get('/', (req, res) => {
-  res.send('Upload')
-})
 
 
 server.get('/', (req, res) => {
 	res.send('Hello World')
 })
-/*
 server.listen(PORT, () => {
 	console.log('listening on ${PORT}')
 })
-*/
 app.use(express.urlencoded({
 	extended: true
 }))

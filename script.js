@@ -5,8 +5,8 @@ const server = express();
 const app = express()
 
 
-const formidable = require('formidable');
-const upload = formidable({dest: __dirname + '/uploads/images'});
+const multer = require('multer');
+const upload = multer({dest: __dirname + '/uploads/images'});
 
 app.use(express.static('public'));
 

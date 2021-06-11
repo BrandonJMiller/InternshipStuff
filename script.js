@@ -16,7 +16,7 @@ app.post('/upload', upload.single('photo'), (req, res) => {
     }
     else throw 'error';
 });
-
+app.post('/path', upload.single('avatar'), function (req, res, next)
 
 
 server.get('/', (req, res) => {

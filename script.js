@@ -17,8 +17,8 @@ app.post('/upload', upload.single('photo'), (req, res) => {
     else throw 'error';
 });
 
-app.listen(PORT, () => {
-    console.log('Listening at ' + PORT );
+app.get('/', function (req, res) {
+  res.render('index', {});
 });
 
 

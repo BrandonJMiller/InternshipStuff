@@ -18,7 +18,7 @@ app.post('/upload', upload.single('photo'), (req, res) => {
 });
 
 app.get('/', function (req, res) {
-  res.render('index', {PORT});
+  res.render('index', ${PORT});
 });
 
 

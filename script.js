@@ -2,11 +2,7 @@ const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 const server = express();
-//const app = express()
-
-
 var formidable = require('formidable');
-
 var app = express();
 
 app.get('/', function (req, res){
@@ -29,7 +25,9 @@ app.post('/', function (req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
-//app.listen(5000);
+app.listen(PORT,() => {
+	console.log('listening on ${PORT}')
+})
 
 
 

@@ -32,14 +32,14 @@ app.listen(PORT,() => {
 
 
 
-/*
+
 server.get('/', (req, res) => {
 	res.send('Hello World')
 })
 server.listen(PORT, () => {
 	console.log('listening on ${PORT}')
 })
-*/
+
 app.use(express.urlencoded({
 	extended: true
 }))

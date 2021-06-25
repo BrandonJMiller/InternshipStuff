@@ -25,9 +25,9 @@ app.post('/', function (req, res){
     res.sendFile(__dirname + '/index.html');
 	
 });
-
-app.listen(PORT,() => {
-	console.log('listening on ${PORT}')
+app.listen(5000);
+//app.listen(PORT,() => {
+	//console.log('listening on ${PORT}')
 })
 
 /*

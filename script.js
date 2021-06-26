@@ -9,10 +9,6 @@ app.get('/', function (req, res){
     res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/', function (req, res){
-    res.sendFile(__dirname + '/style.css');
-});
-
 app.post('/', function (req, res){
     var form = new formidable.IncomingForm();
 

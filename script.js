@@ -8,7 +8,7 @@ var app = express();
 app.get('/', function (req, res){
     res.sendFile(__dirname + '/index.html');
 });
-
+/*
 app.post('/', function (req, res){
     var form = new formidable.IncomingForm();
 
@@ -25,6 +25,7 @@ app.post('/', function (req, res){
     res.sendFile(__dirname + '/index.html');
 	
 });
+*/
 app.listen(5000);
 //app.listen(PORT,() => {
 	//console.log('listening on ${PORT}')

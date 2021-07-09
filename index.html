@@ -18,6 +18,11 @@
 <p><input type="file" accept="image/*" name="song" id="file"  onchange="loadFile(event)" style="display: none;"></p>
 <p class="button"><label for="file" style="cursor: pointer;">Upload Song</label></p>
 <p><img id="output" width="200" /></p>
-
+<script>
+  var loadFile = function(event) {
+	var song = document.getElementById('output');
+	song.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
 </body>
 </html>

@@ -20,10 +20,8 @@
 <p><img id="output" width="200" /></p>
 <script>
   var loadFile = function(event) {
-	  var i = 0;
 	var song = document.getElementById('output');
-	song.src = URL.createObjectURL(event.target.files[i]);
-	i++;
+	song.src = URL.createObjectURL(event.target.files[]);
 };
 </script>
 </body>

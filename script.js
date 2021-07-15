@@ -10,7 +10,7 @@ var app = express();
 
 function previewImages() {
 
-  var preview = document.querySelector('#preview');
+  
   
   if (this.files) {
     [].forEach.call(this.files, readAndPreview);

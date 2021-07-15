@@ -30,7 +30,7 @@ function previewImages() {
       image.height = 100;
       image.title  = file.name;
       image.src    = this.result;
-      preview.appendChild(image);
+      
     });
     
     reader.readAsDataURL(file);

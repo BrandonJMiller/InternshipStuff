@@ -20,10 +20,13 @@
 <script>	
   var loadFile = function(event) {
 	  var i = 0;
+	  for (i = 0; i < 10000; i++)
+	  {
 	var song = document.getElementById('output[i]');
 	song.src = URL.createObjectURL(event.target.files[0]);	
         loadFile.appendChild('output');
 	  i++;
+	  }
 };
 </script>
 </body>

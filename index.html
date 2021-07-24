@@ -23,7 +23,7 @@
 	  for (i = 0; i < 10000; i++)
 	  {
 	var song = document.getElementById('output[i]');
-	song.src = URL.createObjectURL(event.target.files[0]);	
+	song.src = URL.createObjectURL(event.target.files[i]);	
         loadFile.appendChild('output[i]');
 	  i++;
 	  }

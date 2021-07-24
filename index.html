@@ -16,19 +16,13 @@
 <body>
 <input type="file" accept="image/*" name="song" multiple id="file"  onchange="loadFile(event)" style="display: none;"></input>
 <p class="button"><label for="file" style="cursor: pointer;">Upload Song</label></p>
+<img id="output" width="200">
 <script>	
   var loadFile = function(event) {
-	  var i = 0;
-	  for (i = 0; i < 10000; i++)
-	  {
-	var song = document.getElementById('output[i]');
-	song.src = URL.createObjectURL(event.target.files[i]);	
-        loadFile.appendChild('output[i]');
-	  i++;
-	  }
+	var song = document.getElementById('output');
+	song.src = URL.createObjectURL(event.target.files[0]);	
+        loadFile.appendChild('output');
 };
 </script>
-<img id="output[i]" width="200">
-
 </body>
 </html>

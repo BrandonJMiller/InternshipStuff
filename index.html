@@ -14,13 +14,10 @@
     <title>Soundcloud</title>
 </head>
 
-	
-<body>	
-	<form id="myForm" method="post" enctype="multipart/form-data">
-        Files: <input type="file" id="files" name="files" multiple accept="image/*"><br/>
-        <div id="selectedFiles"></div>
-        <input type="submit">
-	</form>
+<body>
+<input type="file" accept="image/*" name="song" multiple id="file"  onchange="loadFile(event)" style="display: none;"></input>
+<p class="button"><label for="file" style="cursor: pointer;">Upload Song</label></p>
+<img multiple id="output" width="200">
 	<script>
 	var selDiv = "";		
 	document.addEventListener("DOMContentLoaded", init, false);	

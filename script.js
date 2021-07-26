@@ -888,7 +888,7 @@ var app = express();
 
     };
 
-})(jQuery);
+})/*(jQuery)*/;
 
 
 

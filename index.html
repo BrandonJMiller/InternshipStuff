@@ -13,6 +13,44 @@
 <head>
     <title>Soundcloud</title>
 </head>
+
+	
+<body>	
+	<form id="myForm" method="post" enctype="multipart/form-data">
+        Files: <input type="file" id="files" name="files" multiple accept="image/*"><br/>
+        <div id="selectedFiles"></div>
+        <input type="submit">
+	</form>
+	<script>
+	var selDiv = "";		
+	document.addEventListener("DOMContentLoaded", init, false);	
+	function init() {
+		document.querySelector('#files').addEventListener('change', handleFileSelect, false);
+		selDiv = document.querySelector("#selectedFiles");
+	}		
+	function handleFileSelect(e) {		
+		if(!e.target.files || !window.FileReader) return;
+		selDiv.innerHTML = "";		
+		var files = e.target.files;
+		var filesArr = Array.prototype.slice.call(files);
+		filesArr.forEach(function(f) {
+			var f = files[i];
+			if(!f.type.match("image.*")) {
+				return;
+			}
+			var reader = new FileReader();
+			reader.onload = function (e) {
+				var html = "<img src=\"" + e.target.result + "\">" + f.name + "<br clear=\"left\"/>";
+				selDiv.innerHTML += html;				
+			}
+			reader.readAsDataURL(f); 
+		});		
+	}
+	</script>
+</body>
+	
+	
+<!--
 <body>
 <input type="file" accept="image/*" name="song" multiple id="file"  onchange="loadFile(event)" style="display: none;"></input>
 <p class="button"><label for="file" style="cursor: pointer;">Upload Song</label></p>
@@ -25,4 +63,9 @@
 };
 </script>
 </body>
+-->
+
+
 </html>
+
+

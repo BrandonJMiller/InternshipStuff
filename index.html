@@ -41,7 +41,8 @@
             <div class="d4 words">Library</div>
 	    <div class="d5 words"><input type="text" placeholder="Search"></div>
 	    <div class="d6">Upgrade</div>
-	    <div class="d7 words">Upload</div>
+	    <div class="d7 words"><input type="file" accept="image/*" name="song" multiple id="file"  onchange="loadFile(event)" style="display: none;"></input>
+<p class="button"><label for="file" style="cursor: pointer;">Upload Song</label></p></div>
 	    <div class="d8 words">Log in</div>
 	    <div class="d9 words"><i class="fas fa-bell"></i></div>
 	    <div class="d10 words"><i class="fas fa-envelope"></i></div>
@@ -54,9 +55,10 @@
   Soundcloud
 </title>
 
-
+<!--
 <input type="file" accept="image/*" name="song" multiple id="file"  onchange="loadFile(event)" style="display: none;"></input>
 <p class="button"><label for="file" style="cursor: pointer;">Upload Song</label></p>
+-->
 <script>
   var loadFile = function(event) {
 	var song = document.getElementById('output');

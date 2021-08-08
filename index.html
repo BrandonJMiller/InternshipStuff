@@ -32,6 +32,11 @@
 </style>
 <html>   
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+<title>
+   Soundcloud
+</title>
+	
 <body>
     <div id="box-container">
 	    <div class="d0"></div>
@@ -50,17 +55,13 @@
 	    <div class="d12"></div>	    
     </div>
 	
-<title>
-  Soundcloud
-</title>
-
-<script class="d10">
+<script>
   var loadFile = function(event) {
 	var song = document.getElementById('output');
 	song.src = URL.createObjectURL(event.target.files[0]);	
         document.body.appendChild('song');
 };
 </script>
-<img multiple id="output" width="200">
+<img multiple id="output" width="400">
 </body>
 </html>

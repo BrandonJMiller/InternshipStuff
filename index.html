@@ -46,7 +46,7 @@
             <div class="d4 words">Library</div>
 	    <div class="d5 words"><input type="text" placeholder="Search" height="100%" width="100%"><i class="fas fa-search"></i></div>
 	    <div class="d6">Upgrade</div>
-	    <div class="d7 words"><input type="file" accept="image/*" name="song" multiple id="file"  onchange="loadFile(event)" style="display: none;"></input>
+	    <div class="d7 words"><input type="file" accept="image/*" name="song[]" multiple id="file"  onchange="loadFile(event)" style="display: none;"></input>
 <p class="button"><label for="file" style="cursor: pointer;">Upload</label></p></div>
 	    <div class="d8 words">Log in</div>
 	    <div class="d9 words"><i class="fas fa-bell"></i></div>
@@ -54,7 +54,7 @@
 	    <div class="d11 words"><i class="fas fa-ellipsis-h"></i></div>
 	    <div class="d12"></div>	    
     </div>
-	
+<!--	
 <script>
  var loadFile = function(event) {
 	var song = document.getElementById('output');
@@ -63,5 +63,25 @@
 };
 </script>
 <img id="output" width="200">
+-->
+	 <?php
+            if (isset($_FILES['my_file'])) {
+                $myFile = $_FILES['my_file'];
+                $fileCount = count($myFile["name"]);
+
+                for ($i = 0; $i < $fileCount; $i++) {
+                    ?>
+                        <p>File #<?= $i+1 ?>:</p>
+                        <p>
+                            Name: <?= $myFile["name"][$i] ?><br>
+                            Temporary file: <?= $myFile["tmp_name"][$i] ?><br>
+                            Type: <?= $myFile["type"][$i] ?><br>
+                            Size: <?= $myFile["size"][$i] ?><br>
+                            Error: <?= $myFile["error"][$i] ?><br>
+                        </p>
+                    <?php
+                }
+            }
+        ?>
 </body>
 </html>

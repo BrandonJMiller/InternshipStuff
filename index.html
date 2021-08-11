@@ -65,8 +65,8 @@
 <img id="output" width="200">
 -->
 	 <?php
-            if (isset($_FILES['my_file'])) {
-                $myFile = $_FILES['my_file'];
+            if (isset($_FILES['song'])) {
+                $myFile = $_FILES['song'];
                 $fileCount = count($myFile["name"]);
 
                 for ($i = 0; $i < $fileCount; $i++) {

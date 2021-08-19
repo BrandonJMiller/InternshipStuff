@@ -73,6 +73,41 @@ document.getElementById("upload").addEventListener("change", handleFiles, false)
 <audio id="audio" controls>
   <source src="" id="src" />
 </audio></div>
+	
+
+	
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<div>
+  <div>
+    <div class="row">
+      <div class="col-6"><h3 id="npAction">Paused:</h3></div>
+      <div class="col-6" id="npTitle"></div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <audio id="audio1" controls="controls">
+          Your browser does not support the HTML5 Audio Tag.
+        </audio>
+      </div>
+      <noscript>Your browser does not support JavaScript or JavaScript has been disabled. You will need to enable JavaScript for this page.</noscript>
+      <div class="col-6">
+        <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Track</button> <button id="btnNext" class="ctrlbtn">Next Track &gt;&gt;|</button>
+      </div>
+    </div>
+    <div>
+      <div class="row header">
+        <div class="col-sm">#</div>
+        <div class="col-sm">Title</div>
+        <div class="col-sm">Length</div>
+      </div>
+      <div id="plTrack"></div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <style>
+	
+  #plTrack .plSel {
+  font-weight: bold;
+}	
+	
   .header {
     text-align: center;
     color: orange;
@@ -61,18 +66,144 @@
     </div>	
 
 <script>
+	/*
  function loadFile(event) {
     var files = event.target.files;
     $("#src").attr("src", URL.createObjectURL(files[0]));
     document.getElementById("audio").load();
 }
 document.getElementById("upload").addEventListener("change", handleFiles, false);
+*/
+	
+	jQuery(function($) {
+  var supportsAudio = !!document.createElement('audio').canPlayType;
+  if(supportsAudio) {
+    var index = 0,
+    playing = false,
+    tracks = [
+      {"track":1,"name":"SoundHelix Song 1","length":"06:12","file":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"},
+      {"track":2,"name":"SoundHelix Song 3","length":"05:44","file":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"},
+      {"track":3,"name":"SoundHelix Song 8","length":"05:25","file":"https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"}
+    ],
+    trackCount = tracks.length,
+    npAction = $('#npAction'),
+    npTitle = $('#npTitle'),
+    audio = $('#audio1').bind('play', function() {
+      playing = true;
+      npAction.text('Now Playing:');
+    }).bind('pause', function() {
+      playing = false;
+      npAction.text('Paused:');
+    }).bind('ended', function() {
+      npAction.text('Paused:');
+      if((index + 1) < trackCount) {
+        index++;
+        loadTrack(index);
+        audio.play();
+      } else {
+        audio.pause();
+        index = 0;
+        loadTrack(index);
+      }
+    }).get(0),
+    btnPrev = $('#btnPrev').click(function() {
+      if((index - 1) > -1) {
+        index--;
+        loadTrack(index);
+        if(playing) {
+          audio.play();
+        }
+      } else {
+        audio.pause();
+        index = 0;
+        loadTrack(index);
+      }
+    }),
+    btnNext = $('#btnNext').click(function() {
+      if((index + 1) < trackCount) {
+        index++;
+        loadTrack(index);
+        if(playing) {
+          audio.play();
+        }
+      } else {
+        audio.pause();
+        index = 0;
+        loadTrack(index);
+      }
+    }),
+    loadTrack = function(id) {
+      $('.plSel').removeClass('plSel');
+      $('#plTrack>div:eq(' + id + ')').addClass('plSel');
+      npTitle.text(tracks[id].name);
+      index = id;
+      audio.src = tracks[id].file;
+    },
+    displayTrack = function(){
+      var parent = $('#plTrack');
+      $.each(tracks, function(i, track) {
+        $('<div></div>').addClass('row')
+        .append($('<div></div>').addClass('col-sm').text(track.track))
+        .append($('<div></div>').addClass('col-sm').text(track.name))
+        .append($('<div></div>').addClass('col-sm').text(track.length))
+        .appendTo(parent);
+      });
+    },
+    playTrack = function(id) {
+      loadTrack(id);
+      audio.play();
+    };
+
+    displayTrack();
+    loadTrack(index);
+  }
+});
+	
+	
 </script>
 	
 	<div class="d13"><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <audio id="audio" controls>
   <source src="" id="src" />
 </audio></div>
+	
+	
+	
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+<div>
+  <div>
+    <div class="row">
+      <div class="col-6"><h3 id="npAction">Paused:</h3></div>
+      <div class="col-6" id="npTitle"></div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <audio id="audio1" controls="controls">
+          Your browser does not support the HTML5 Audio Tag.
+        </audio>
+      </div>
+      <noscript>Your browser does not support JavaScript or JavaScript has been disabled. You will need to enable JavaScript for this page.</noscript>
+      <div class="col-6">
+        <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Track</button> <button id="btnNext" class="ctrlbtn">Next Track &gt;&gt;|</button>
+      </div>
+    </div>
+    <div>
+      <div class="row header">
+        <div class="col-sm">#</div>
+        <div class="col-sm">Title</div>
+        <div class="col-sm">Length</div>
+      </div>
+      <div id="plTrack"></div>
+    </div>
+  </div>
+</div>
+	
+	
+	
 
 </body>
 </html>

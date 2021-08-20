@@ -62,11 +62,35 @@
 
 <script>
  function loadFile(event) {
+	 
+	 
+for (var i = 0; i < document.getElementById("audio").files.length; i++) 
+        {                           
+                document.getElementById("audio").innerHTML="uploading....";
+                var myfile=document.getElementById("audio").files[i];
+                //alert(myfile.size);
+                var r = new FileReader();
+                r.onload = function(e) 
+                { 
+                    var contents = e.target.result;
+
+                    parseContents(contents);
+                    //document.getElementById("cont").innerHTML=fileContent;
+
+                    document.getElementById("upload").innerHTML="<h3>File uploaded: "+myfile.name;
+                }
+
+                r.readAsText(myfile);
+        }
+}
+
+/*
     var files = event.target.files;
     $("#src").attr("src", URL.createObjectURL(files[0]));
     document.getElementById("audio").load();
 }
-document.getElementById("upload").addEventListener("change", handleFiles, false);	
+document.getElementById("upload").addEventListener("change", handleFiles, false);
+*/
 </script>
 	
 	<div class="d13"><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
